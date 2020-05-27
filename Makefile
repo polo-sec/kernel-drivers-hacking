@@ -1,14 +1,6 @@
-ifeq ($(strip $(MODULE)),)
-	obj-m += hello_simple.o
-else
-	obj-m += $(MODULE).o
-endif
-
-
-KERNEL_SRC = /lib/modules/$(shell uname -r)/build
+obj-m += lkm_example.o
 
 all:
-	make -C $(KERNEL_SRC) M=$(PWD) modules
-
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 clean:
-	make -C $(KERNEL_SRC) M=$(PWD) clean
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
