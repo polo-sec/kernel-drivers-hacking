@@ -1,0 +1,1 @@
+cmd_/home/matt/Documents/Research/kernel-drivers-hacking/simple_device_example/lkm_device.mod := { echo  /home/matt/Documents/Research/kernel-drivers-hacking/simple_device_example/lkm_device.o; echo; } > /home/matt/Documents/Research/kernel-drivers-hacking/simple_device_example/lkm_device.mod

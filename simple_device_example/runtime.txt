@@ -1,0 +1,16 @@
+To run, and view this driver- you will need to:
+
+1. Use tail to watch the kernel log:
+  sudo tail -f /var/log/kern.log
+
+2. Use insmod to load the driver.ko:
+  sudo insmod lkm_device.ko
+
+3. Watch the kernel log, and note down the major number
+  e.g. 241
+
+4. Change directory into /dev and make a new node using the major number
+  sudo mknod lkm c 241 0
+
+5. This will now function as a device, which you can, for example, cat to get
+  the "99 Red Balloons" output in text, transferred from kernel to userspace.

@@ -1,4 +1,4 @@
-obj-m += lkm_example.o
+obj-m += lkm_device.o
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
