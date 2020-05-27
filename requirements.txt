@@ -3,4 +3,4 @@ build-essential
 linux-headers-`uname -r`
 
 Install:
-apt-get install build-essential linux-headers-`uname -r`
+apt install build-essential linux-headers-`uname -r`
